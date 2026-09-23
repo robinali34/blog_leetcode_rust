@@ -12,7 +12,7 @@ Have fun~
 
 ## What You'll Find Here
 
-- **Algorithm Solutions**: Step-by-step solutions to [313+ LeetCode problems](/blog_leetcode_rust/leetcode-questions-list.html) with detailed analysis
+- **Algorithm Solutions**: Step-by-step solutions to [1 LeetCode problem](/blog_leetcode_rust/leetcode-questions-list.html) with detailed analysis
 - **Algorithm Templates**: Reusable [pattern templates](/blog_leetcode_rust/leetcode-templates/) for every major algorithm category
 - **[LeetCode Beginner's Guide](/blog_leetcode_rust/2026/06/25/leetcode-beginners-guide/)**: A complete roadmap from zero to interview-ready
 - **[Rust Guide](/blog_leetcode_rust/rust-guide/)**: Learn Rust for competitive programming, from basics to modern language features
