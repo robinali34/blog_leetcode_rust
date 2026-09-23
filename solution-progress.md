@@ -1,0 +1,382 @@
+# Solution update progress
+
+Manual Ruby solutions go in `_posts/`. Original-language sources (mostly C++) wait in `_cache/posts/` until you rewrite a solution and publish it.
+
+**How to publish the next one**
+
+1. Copy `_cache/posts/<file>.md` to `_posts/<file>.md`
+2. Rewrite the solution fences to Ruby (leave the rest of the post as-is)
+3. Check the box here
+
+## Published
+
+- [x] `2026-09-22-easy-1-two-sum.md` — [Easy] 1. Two Sum (public)
+
+## Problems still in cache (338)
+
+- [ ] `2025-09-23-medium-33-search-in-rotated-sorted-array.md` — [Medium] 33. Search in Rotated Sorted Array
+- [ ] `2025-09-24-hard-25-reverse-nodes-in-k-group.md` — [Hard] 25. Reverse Nodes in k-Group
+- [ ] `2025-09-24-hard-317-shortest-distance-from-all-buildings.md` — [Hard] 317. Shortest Distance from All Buildings
+- [ ] `2025-09-24-hash-question-list.md` — Hash Table Mastery List
+- [ ] `2025-09-24-linked-list-question-list.md` — LeetCode Linked List Mastery List
+- [ ] `2025-09-24-medium-1242-web-crawler-multithreaded.md` — [Medium] 1242. Web Crawler Multithreaded
+- [ ] `2025-09-24-medium-150-evaluate-reverse-polish-notation.md` — [Medium] 150. Evaluate Reverse Polish Notation
+- [ ] `2025-09-24-medium-23-swap-nodes-in-pairs.md` — [Medium] 24. Swap Nodes in Pairs
+- [ ] `2025-09-24-medium-48-rotate-image.md` — [Medium] 48. Rotate Image
+- [ ] `2025-09-24-medium-62-unique-paths.md` — [Medium] 62. Unique Paths
+- [ ] `2025-09-24-medium-794-valid-tic-tac-toe-state.md` — [Medium] 794. Valid Tic-Tac-Toe State
+- [ ] `2025-09-24-meta-question-list.md` — Meta‑Style LeetCode Question List
+- [ ] `2025-09-25-medium-50-pow-x-n.md` — [Medium] 50. Pow(x, n)
+- [ ] `2025-09-25-medium-54-spiral-matrix.md` — [Medium] 54. Spiral Matrix
+- [ ] `2025-09-25-medium-89-gray-code.md` — [Medium] 89. Gray Code
+- [ ] `2025-09-29-medium-77-combinations.md` — [Medium] 77. Combinations
+- [ ] `2025-09-30-medium-131-palindrome-partitioning.md` — [Medium] 131. Palindrome Partitioning
+- [ ] `2025-10-03-medium-96-unique-binary-search-trees.md` — [Medium] 96. Unique Binary Search Trees
+- [ ] `2025-10-04-medium-990-satisfiability-of-equality-equations.md` — [Medium] 990. Satisfiability of Equality Equations
+- [ ] `2025-10-05-hard-218-skyline-problem.md` — [Hard] 218. The Skyline Problem
+- [ ] `2025-10-06-medium-240-search-a-2d-matrix-ii.md` — [Medium] 240. Search a 2D Matrix II
+- [ ] `2025-10-06-medium-912-sort-an-array.md` — [Medium] 912. Sort an Array
+- [ ] `2025-10-09-medium-3-longest-substring-without-repeating-characters.md` — [Medium] 3. Longest Substring Without Repeating Characters
+- [ ] `2025-10-15-medium-494-target-sum.md` — [Medium] 494. Target Sum
+- [ ] `2025-10-16-medium-1124-longest-well-performing-interval.md` — [Medium] 1124. Longest Well-Performing Interval
+- [ ] `2025-10-16-medium-2466-count-ways-to-build-good-strings.md` — [Medium] 2466. Count Ways To Build Good Strings
+- [ ] `2025-10-17-medium-1856-maximum-sum-of-minimum-product.md` — [Medium] 1856. Maximum Sum of Minimum Product
+- [ ] `2025-10-17-medium-2799-count-complete-subarrays-in-an-array.md` — [Medium] 2799. Count Complete Subarrays in an Array
+- [ ] `2025-10-17-medium-300-longest-increasing-subsequence.md` — [Medium] 300. Longest Increasing Subsequence
+- [ ] `2025-10-17-medium-316-remove-duplicate-letters.md` — [Medium] 316. Remove Duplicate Letters
+- [ ] `2025-10-17-medium-503-next-greater-element-ii.md` — [Medium] 503. Next Greater Element II
+- [ ] `2025-10-17-medium-648-replace-words.md` — [Medium] 648. Replace Words
+- [ ] `2025-10-19-medium-1570-dot-product-of-two-sparse-vectors.md` — [Medium] 1570. Dot Product of Two Sparse Vectors
+- [ ] `2025-10-19-medium-1865-finding-pairs-with-a-certain-sum.md` — [Medium] 1865. Finding Pairs With a Certain Sum
+- [ ] `2025-10-19-medium-394-decode-string.md` — [Medium] 394. Decode String
+- [ ] `2025-10-19-medium-406-queue-reconstruction-by-height.md` — [Medium] 406. Queue Reconstruction by Height
+- [ ] `2025-10-19-medium-417-pacific-atlantic-water-flow.md` — [Medium] 417. Pacific Atlantic Water Flow
+- [ ] `2025-10-19-medium-437-path-sum-iii.md` — [Medium] 437. Path Sum III
+- [ ] `2025-10-20-easy-1207-unique-number-of-occurrences.md` — [Easy] 1207. Unique Number of Occurrences
+- [ ] `2025-10-20-hard-84-largest-rectangle-in-histogram.md` — [Hard] 84. Largest Rectangle in Histogram
+- [ ] `2025-10-20-medium-133-clone-graph.md` — [Medium] 133. Clone Graph
+- [ ] `2025-10-20-medium-1443-minimum-time-to-collect-all-apples-in-a-tree.md` — [Medium] 1443. Minimum Time to Collect All Apples in a Tree
+- [ ] `2025-10-20-medium-1650-lowest-common-ancestor-of-a-binary-tree-iii.md` — [Medium] 1650. Lowest Common Ancestor of a Binary Tree III
+- [ ] `2025-10-20-medium-1868-product-of-two-run-length-encoded-arrays.md` — [Medium] 1868. Product of Two Run-Length Encoded Arrays
+- [ ] `2025-10-20-medium-2043-simple-bank-system.md` — [Medium] 2043. Simple Bank System
+- [ ] `2025-10-20-medium-207-course-schedule.md` — [Medium] 207. Course Schedule
+- [ ] `2025-10-20-medium-314-binary-tree-vertical-order-traversal.md` — [Medium] 314. Binary Tree Vertical Order Traversal
+- [ ] `2025-10-20-medium-322-coin-change.md` — [Medium] 322. Coin Change
+- [ ] `2025-10-20-medium-46-permutations.md` — [Medium] 46. Permutations
+- [ ] `2025-10-20-medium-47-permutations-ii.md` — [Medium] 47. Permutations II
+- [ ] `2025-10-20-medium-695-max-area-of-island.md` — [Medium] 695. Max Area of Island
+- [ ] `2025-10-20-medium-752-open-the-lock.md` — [Medium] 752. Open the Lock
+- [ ] `2025-10-20-medium-77-combinations.md` — [Medium] 77. Combinations
+- [ ] `2025-10-21-medium-347-top-k-frequent-elements.md` — [Medium] 347. Top K Frequent Elements
+- [ ] `2025-10-21-medium-348-design-tic-tac-toe.md` — [Medium] 348. Design Tic-Tac-Toe
+- [ ] `2025-10-21-medium-419-battleships-in-a-board.md` — [Medium] 419. Battleships in a Board
+- [ ] `2025-10-21-medium-545-boundary-of-binary-tree.md` — [Medium] 545. Boundary of Binary Tree
+- [ ] `2025-10-21-medium-973-k-closest-points-to-origin.md` — [Medium] 973. K Closest Points to Origin
+- [ ] `2025-10-22-medium-1094-car-pooling.md` — [Medium] 1094. Car Pooling
+- [ ] `2025-10-22-medium-1249-minimum-remove-to-make-valid-parentheses.md` — [Medium] 1249. Minimum Remove to Make Valid Parentheses
+- [ ] `2025-10-22-medium-426-convert-binary-search-tree-to-sorted-doubly-linked-list.md` — [Medium] 426. Convert Binary Search Tree to Sorted Doubly Linked List
+- [ ] `2025-10-25-medium-863-all-nodes-distance-k-in-binary-tree.md` — [Medium] 863. All Nodes Distance K in Binary Tree
+- [ ] `2025-10-27-medium-636-exclusive-time-of-functions.md` — [Medium] 636. Exclusive Time of Functions
+- [ ] `2025-10-27-medium-708-insert-into-a-sorted-circular-linked-list.md` — [Medium] 708. Insert into a Sorted Circular Linked List
+- [ ] `2025-10-29-easy-344-reverse-string.md` — [Easy] 344. Reverse String
+- [ ] `2025-10-29-easy-717-1-bit-and-2-bit-characters.md` — [Easy] 717. 1-bit and 2-bit Characters
+- [ ] `2025-11-04-easy-20-valid-parentheses.md` — [Easy] 20. Valid Parentheses
+- [ ] `2025-11-04-easy-485-max-consecutive-ones.md` — [Easy] 485. Max Consecutive Ones
+- [ ] `2025-11-04-hard-239-sliding-window-maximum.md` — [Hard] 239. Sliding Window Maximum
+- [ ] `2025-11-04-hard-480-sliding-window-median.md` — [Hard] 480. Sliding Window Median
+- [ ] `2025-11-04-medium-18-4sum.md` — [Medium] 18. 4Sum
+- [ ] `2025-11-04-medium-324-wiggle-sort-ii.md` — [Medium] 324. Wiggle Sort II
+- [ ] `2025-11-04-medium-525-contiguous-array.md` — [Medium] 525. Contiguous Array
+- [ ] `2025-11-04-medium-921-minimum-add-to-make-valid-parentheses.md` — [Medium] 921. Minimum Add to Make Parentheses Valid
+- [ ] `2025-11-13-hard-772-basic-calculator-iii.md` — [Hard] 772. Basic Calculator III
+- [ ] `2025-11-13-medium-224-basic-calculator.md` — [Medium] 224. Basic Calculator
+- [ ] `2025-11-13-medium-227-basic-calculator-ii.md` — [Medium] 227. Basic Calculator II
+- [ ] `2025-11-14-hard-460-lfu-cache.md` — [Hard] 460. LFU Cache
+- [ ] `2025-11-14-medium-146-lru-cache.md` — [Medium] 146. LRU Cache
+- [ ] `2025-11-14-medium-93-restore-ip-addresses.md` — [Medium] 93. Restore IP Addresses
+- [ ] `2025-11-16-easy-206-reverse-linked-list.md` — [Easy] 206. Reverse Linked List
+- [ ] `2025-11-16-medium-146-lru-cache.md` — [Medium] 146. LRU Cache
+- [ ] `2025-11-17-medium-1424-diagonal-traverse-ii.md` — [Medium] 1424. Diagonal Traverse II
+- [ ] `2025-11-18-easy-203-remove-linked-list-elements.md` — [Easy] 203. Remove Linked List Elements
+- [ ] `2025-11-18-easy-509-fibonacci-number.md` — [Easy] 509. Fibonacci Number
+- [ ] `2025-11-18-medium-198-house-robber.md` — [Medium] 198. House Robber
+- [ ] `2025-11-18-medium-2-add-two-numbers.md` — [Medium] 2. Add Two Numbers
+- [ ] `2025-11-18-medium-45-jump-game-ii.md` — [Medium] 45. Jump Game II
+- [ ] `2025-11-18-medium-49-group-anagrams.md` — [Medium] 49. Group Anagrams
+- [ ] `2025-11-18-medium-969-pancake-sorting.md` — [Medium] 969. Pancake Sorting
+- [ ] `2025-11-20-medium-200-number-of-islands.md` — [Medium] 200. Number of Islands
+- [ ] `2025-11-24-easy-1047-remove-all-adjacent-duplicates-in-string.md` — [Easy] 1047. Remove All Adjacent Duplicates In String
+- [ ] `2025-11-24-easy-408-valid-word-abbreviation.md` — [Easy] 408. Valid Word Abbreviation
+- [ ] `2025-11-24-easy-938-range-sum-of-bst.md` — [Easy] 938. Range Sum of BST
+- [ ] `2025-11-24-hard-32-longest-valid-parentheses.md` — [Hard] 32. Longest Valid Parentheses
+- [ ] `2025-11-24-hard-489-robot-room-cleaner.md` — [Hard] 489. Robot Room Cleaner
+- [ ] `2025-11-24-medium-1209-remove-all-adjacent-duplicates-in-string-ii.md` — [Medium] 1209. Remove All Adjacent Duplicates in String II
+- [ ] `2025-11-24-medium-129-sum-root-to-leaf-numbers.md` — [Medium] 129. Sum Root to Leaf Numbers
+- [ ] `2025-11-24-medium-1762-buildings-with-an-ocean-view.md` — [Medium] 1762. Buildings With an Ocean View
+- [ ] `2025-11-24-medium-277-find-the-celebrity.md` — [Medium] 277. Find the Celebrity
+- [ ] `2025-11-24-medium-398-random-pick-index.md` — [Medium] 398. Random Pick Index
+- [ ] `2025-11-24-medium-528-random-pick-with-weight.md` — [Medium] 528. Random Pick with Weight
+- [ ] `2025-11-24-medium-56-merge-intervals.md` — [Medium] 56. Merge Intervals
+- [ ] `2025-11-24-medium-647-palindromic-substrings.md` — [Medium] 647. Palindromic Substrings
+- [ ] `2025-11-24-medium-983-minimum-cost-for-tickets.md` — [Medium] 983. Minimum Cost For Tickets
+- [ ] `2025-11-24-medium-round-trip-ticket-cost.md` — [Medium] Round Trip Ticket Cost Minimization
+- [ ] `2025-12-02-medium-146-lru-cache.md` — [Medium] 146. LRU Cache
+- [ ] `2025-12-02-medium-593-valid-square.md` — [Medium] 593. Valid Square
+- [ ] `2025-12-02-medium-75-sort-colors.md` — [Medium] 75. Sort Colors
+- [ ] `2025-12-03-hard-1206-design-skiplist.md` — [Hard] 1206. Design Skiplist
+- [ ] `2025-12-10-medium-281-zigzag-iterator.md` — [Medium] 281. Zigzag Iterator
+- [ ] `2025-12-11-easy-67-add-binary.md` — [Easy] 67. Add Binary
+- [ ] `2025-12-11-medium-253-meeting-rooms-ii.md` — [Medium] 253. Meeting Rooms II
+- [ ] `2025-12-13-medium-994-rotting-oranges.md` — [Medium] 994. Rotting Oranges
+- [ ] `2025-12-14-easy-346-moving-average-from-data-stream.md` — [Easy] 346. Moving Average from Data Stream
+- [ ] `2025-12-14-medium-279-perfect-squares.md` — [Medium] 279. Perfect Squares
+- [ ] `2025-12-14-medium-286-walls-and-gates.md` — [Medium] 286. Walls and Gates
+- [ ] `2025-12-16-hard-850-rectangle-area-ii.md` — [Hard] 850. Rectangle Area II
+- [ ] `2025-12-16-medium-690-employee-importance.md` — [Medium] 690. Employee Importance
+- [ ] `2025-12-17-medium-399-evaluate-division.md` — [Medium] 399. Evaluate Division
+- [ ] `2025-12-18-medium-547-number-of-provinces.md` — [Medium] 547. Number of Provinces
+- [ ] `2025-12-28-medium-1976-number-of-ways-to-arrive-at-destination.md` — [Medium] 1976. Number of Ways to Arrive at Destination
+- [ ] `2025-12-29-medium-684-redundant-connection.md` — [Medium] 684. Redundant Connection
+- [ ] `2025-12-30-easy-270-closest-binary-search-tree-value.md` — [Easy] 270. Closest Binary Search Tree Value
+- [ ] `2025-12-30-easy-661-image-smoother.md` — [Easy] 661. Image Smoother
+- [ ] `2025-12-30-hard-685-redundant-connection-ii.md` — [Hard] 685. Redundant Connection II
+- [ ] `2025-12-30-medium-285-inorder-successor-in-bst.md` — [Medium] 285. Inorder Successor in BST
+- [ ] `2025-12-30-medium-487-max-consecutive-ones-ii.md` — [Medium] 487. Max Consecutive Ones II
+- [ ] `2025-12-30-medium-616-add-bold-tag-in-string.md` — [Medium] 616. Add Bold Tag in String
+- [ ] `2025-12-30-medium-681-next-closest-time.md` — [Medium] 681. Next Closest Time
+- [ ] `2025-12-30-medium-683-k-empty-slots.md` — [Medium] 683. K Empty Slots
+- [ ] `2025-12-30-medium-686-repeated-string-match.md` — [Medium] 686. Repeated String Match
+- [ ] `2025-12-31-easy-496-next-greater-element-i.md` — [Easy] 496. Next Greater Element I
+- [ ] `2025-12-31-hard-308-range-sum-query-2d-mutable.md` — [Hard] 308. Range Sum Query 2D - Mutable
+- [ ] `2025-12-31-hard-425-word-squares.md` — [Hard] 425. Word Squares
+- [ ] `2025-12-31-hard-568-maximum-vacation-days.md` — [Hard] 568. Maximum Vacation Days
+- [ ] `2025-12-31-hard-715-range-module.md` — [Hard] 715. Range Module
+- [ ] `2025-12-31-medium-360-sort-transformed-array.md` — [Medium] 360. Sort Transformed Array
+- [ ] `2025-12-31-medium-393-utf-8-validation.md` — [Medium] 393. UTF-8 Validation
+- [ ] `2025-12-31-medium-418-sentence-screen-fitting.md` — [Medium] 418. Sentence Screen Fitting
+- [ ] `2026-01-01-easy-303-range-sum-query-immutable.md` — [Easy] 303. Range Sum Query - Immutable
+- [ ] `2026-01-01-medium-1177-can-make-palindrome-from-substring.md` — [Medium] 1177. Can Make Palindrome from Substring
+- [ ] `2026-01-02-medium-351-android-unlock-patterns.md` — [Medium] 351. Android Unlock Patterns
+- [ ] `2026-01-03-easy-392-is-subsequence.md` — [Easy] 392. Is Subsequence
+- [ ] `2026-01-03-easy-455-assign-cookies.md` — [Easy] 455. Assign Cookies
+- [ ] `2026-01-03-easy-561-array-partition.md` — [Easy] 561. Array Partition
+- [ ] `2026-01-03-easy-860-lemonade-change.md` — [Easy] 860. Lemonade Change
+- [ ] `2026-01-03-medium-122-best-time-to-buy-and-sell-stock-ii.md` — [Medium] 122. Best Time to Buy and Sell Stock II
+- [ ] `2026-01-03-medium-435-non-overlapping-intervals.md` — [Medium] 435. Non-overlapping Intervals
+- [ ] `2026-01-03-medium-452-minimum-number-of-arrows-to-burst-balloons.md` — [Medium] 452. Minimum Number of Arrows to Burst Balloons
+- [ ] `2026-01-03-medium-55-jump-game.md` — [Medium] 55. Jump Game
+- [ ] `2026-01-04-easy-1217-minimum-cost-to-move-chips-to-the-same-position.md` — [Easy] 1217. Minimum Cost to Move Chips to The Same Position
+- [ ] `2026-01-04-easy-1710-maximum-units-on-a-truck.md` — [Easy] 1710. Maximum Units on a Truck
+- [ ] `2026-01-04-hard-135-candy.md` — [Hard] 135. Candy
+- [ ] `2026-01-04-medium-1029-two-city-scheduling.md` — [Medium] 1029. Two City Scheduling
+- [ ] `2026-01-04-medium-1247-minimum-swaps-to-make-strings-equal.md` — [Medium] 1247. Minimum Swaps to Make Strings Equal
+- [ ] `2026-01-04-medium-1400-construct-k-palindrome-strings.md` — [Medium] 1400. Construct K Palindrome Strings
+- [ ] `2026-01-04-medium-1605-find-valid-matrix-given-row-and-column-sums.md` — [Medium] 1605. Find Valid Matrix Given Row and Column Sums
+- [ ] `2026-01-04-medium-376-wiggle-subsequence.md` — [Medium] 376. Wiggle Subsequence
+- [ ] `2026-01-04-medium-53-maximum-subarray.md` — [Medium] 53. Maximum Subarray
+- [ ] `2026-01-05-medium-215-kth-largest-element-in-an-array.md` — [Medium] 215. Kth Largest Element in an Array
+- [ ] `2026-01-06-medium-103-binary-tree-zigzag-level-order-traversal.md` — [Medium] 103. Binary Tree Zigzag Level Order Traversal
+- [ ] `2026-01-07-easy-993-cousins-in-binary-tree.md` — [Easy] 993. Cousins in Binary Tree
+- [ ] `2026-01-07-medium-102-binary-tree-level-order-traversal.md` — [Medium] 102. Binary Tree Level Order Traversal
+- [ ] `2026-01-07-medium-323-number-of-connected-components-in-an-undirected-graph.md` — [Medium] 323. Number of Connected Components in an Undirected Graph
+- [ ] `2026-01-07-medium-429-n-ary-tree-level-order-traversal.md` — [Medium] 429. N-ary Tree Level Order Traversal
+- [ ] `2026-01-08-medium-5-longest-palindromic-substring.md` — [Medium] 5. Longest Palindromic Substring
+- [ ] `2026-01-08-medium-692-top-k-frequent-words.md` — [Medium] 692. Top K Frequent Words
+- [ ] `2026-01-09-medium-673-number-of-longest-increasing-subsequence.md` — [Medium] 673. Number of Longest Increasing Subsequence
+- [ ] `2026-01-10-hard-1340-jump-game-v.md` — [Hard] 1340. Jump Game V
+- [ ] `2026-01-10-medium-64-minimum-path-sum.md` — [Medium] 64. Minimum Path Sum
+- [ ] `2026-01-11-medium-721-accounts-merge.md` — [Medium] 721. Accounts Merge
+- [ ] `2026-01-12-easy-844-backspace-string-compare.md` — [Easy] 844. Backspace String Compare
+- [ ] `2026-01-12-hard-51-n-queens.md` — [Hard] 51. N-Queens
+- [ ] `2026-01-12-medium-22-generate-parentheses.md` — [Medium] 22. Generate Parentheses
+- [ ] `2026-01-12-medium-79-word-search.md` — [Medium] 79. Word Search
+- [ ] `2026-01-13-medium-1670-design-front-middle-back-queue.md` — [Medium] 1670. Design Front Middle Back Queue
+- [ ] `2026-01-14-hard-269-alien-dictionary.md` — [Hard] 269. Alien Dictionary
+- [ ] `2026-01-14-medium-310-minimum-height-trees.md` — [Medium] 310. Minimum Height Trees
+- [ ] `2026-01-14-medium-lcr113-course-schedule-ii.md` — [Medium] LCR 113. Course Schedule II
+- [ ] `2026-01-15-hard-315-count-of-smaller-numbers-after-self.md` — [Hard] 315. Count of Smaller Numbers After Self
+- [ ] `2026-01-15-medium-802-find-eventual-safe-states.md` — [Medium] 802. Find Eventual Safe States
+- [ ] `2026-01-16-hard-305-number-of-islands-ii.md` — [Hard] 305. Number of Islands II
+- [ ] `2026-01-16-medium-307-range-sum-query-mutable.md` — [Medium] 307. Range Sum Query - Mutable
+- [ ] `2026-01-16-medium-3477-number-of-unplaced-fruits.md` — [Medium] 3477. Number of Unplaced Fruits
+- [ ] `2026-01-17-hard-315-count-of-smaller-numbers-after-self.md` — [Hard] 315. Count of Smaller Numbers After Self
+- [ ] `2026-01-17-medium-729-my-calendar-i.md` — [Medium] 729. My Calendar I
+- [ ] `2026-01-18-easy-3110-score-of-a-string.md` — [Easy] 3110. Score of a String
+- [ ] `2026-01-18-easy-409-longest-palindrome.md` — [Easy] 409. Longest Palindrome
+- [ ] `2026-01-18-hard-732-my-calendar-iii.md` — [Hard] 732. My Calendar III
+- [ ] `2026-01-18-medium-208-implement-trie.md` — [Medium] 208. Implement Trie (Prefix Tree)
+- [ ] `2026-01-18-medium-211-design-add-and-search-words-data-structure.md` — [Medium] 211. Design Add and Search Words Data Structure
+- [ ] `2026-01-19-easy-100-same-tree.md` — [Easy] 100. Same Tree
+- [ ] `2026-01-19-easy-101-symmetric-tree.md` — [Easy] 101. Symmetric Tree
+- [ ] `2026-01-19-easy-104-maximum-depth-of-binary-tree.md` — [Easy] 104. Maximum Depth of Binary Tree
+- [ ] `2026-01-19-easy-111-minimum-depth-of-binary-tree.md` — [Easy] 111. Minimum Depth of Binary Tree
+- [ ] `2026-01-19-easy-112-path-sum.md` — [Easy] 112. Path Sum
+- [ ] `2026-01-19-easy-1624-largest-substring-between-two-equal-characters.md` — [Easy] 1624. Largest Substring Between Two Equal Characters
+- [ ] `2026-01-19-easy-2185-counting-words-with-a-given-prefix.md` — [Easy] 2185. Counting Words With a Given Prefix
+- [ ] `2026-01-19-easy-226-invert-binary-tree.md` — [Easy] 226. Invert Binary Tree
+- [ ] `2026-01-19-easy-349-intersection-of-two-arrays.md` — [Easy] 349. Intersection of Two Arrays
+- [ ] `2026-01-19-easy-387-first-unique-character-in-a-string.md` — [Easy] 387. First Unique Character in a String
+- [ ] `2026-01-19-easy-409-longest-palindrome.md` — [Easy] 409. Longest Palindrome
+- [ ] `2026-01-19-easy-645-set-mismatch.md` — [Easy] 645. Set Mismatch
+- [ ] `2026-01-19-medium-1701-average-waiting-time.md` — [Medium] 1701. Average Waiting Time
+- [ ] `2026-01-19-medium-211-design-add-and-search-words-data-structure.md` — [Medium] 211. Design Add and Search Words Data Structure
+- [ ] `2026-01-19-medium-236-lowest-common-ancestor-of-a-binary-tree.md` — [Medium] 236. Lowest Common Ancestor of a Binary Tree
+- [ ] `2026-01-20-hard-327-count-of-range-sum.md` — [Hard] 327. Count of Range Sum
+- [ ] `2026-01-20-medium-189-rotate-array.md` — [Medium] 189. Rotate Array
+- [ ] `2026-01-20-medium-498-diagonal-traverse.md` — [Medium] 498. Diagonal Traverse
+- [ ] `2026-01-21-medium-63-unique-paths-ii.md` — [Medium] 63. Unique Paths II
+- [ ] `2026-01-22-medium-1801-number-of-orders-in-the-backlog.md` — [Medium] 1801. Number of Orders in the Backlog
+- [ ] `2026-01-23-medium-1233-remove-sub-folders-from-the-filesystem.md` — [Medium] 1233. Remove Sub-Folders from the Filesystem
+- [ ] `2026-01-24-medium-622-design-circular-queue.md` — [Medium] 622. Design Circular Queue
+- [ ] `2026-01-25-medium-213-house-robber-ii.md` — [Medium] 213. House Robber II
+- [ ] `2026-01-25-medium-354-russian-doll-envelopes.md` — [Medium] 354. Russian Doll Envelopes
+- [ ] `2026-01-26-easy-27-remove-element.md` — [Easy] 27. Remove Element
+- [ ] `2026-01-26-hard-862-shortest-subarray-with-sum-at-least-k.md` — [Hard] 862. Shortest Subarray with Sum at Least K
+- [ ] `2026-01-26-medium-209-minimum-size-subarray-sum.md` — [Medium] 209. Minimum Size Subarray Sum
+- [ ] `2026-01-27-hard-1136-parallel-courses.md` — [Hard] 1136. Parallel Courses
+- [ ] `2026-01-27-medium-238-product-of-array-except-self.md` — [Medium] 238. Product of Array Except Self
+- [ ] `2026-01-28-medium-2080-range-frequency-queries.md` — [Medium] 2080. Range Frequency Queries
+- [ ] `2026-01-29-medium-739-daily-temperatures.md` — [Medium] 739. Daily Temperatures
+- [ ] `2026-01-30-easy-35-search-insert-position.md` — [Easy] 35. Search Insert Position
+- [ ] `2026-01-30-medium-162-find-peak-element.md` — [Medium] 162. Find Peak Element
+- [ ] `2026-01-30-medium-34-find-first-and-last-position-of-element-in-sorted-array.md` — [Medium] 34. Find First and Last Position of Element in Sorted Array
+- [ ] `2026-01-30-medium-981-time-based-key-value-store.md` — [Medium] 981. Time Based Key-Value Store
+- [ ] `2026-02-01-hard-44-wildcard-matching.md` — [Hard] 44. Wildcard Matching
+- [ ] `2026-02-01-medium-325-maximum-size-subarray-sum-equals-k.md` — [Medium] 325. Maximum Size Subarray Sum Equals k
+- [ ] `2026-02-01-medium-560-subarray-sum-equals-k.md` — [Medium] 560. Subarray Sum Equals K
+- [ ] `2026-02-02-hard-843-guess-the-word.md` — [Hard] 843. Guess the Word
+- [ ] `2026-02-02-medium-974-subarray-sums-divisible-by-k.md` — [Medium] 974. Subarray Sums Divisible by K
+- [ ] `2026-02-03-medium-743-network-delay-time.md` — [Medium] 743. Network Delay Time
+- [ ] `2026-02-04-medium-787-cheapest-flights-within-k-stops.md` — [Medium] 787. Cheapest Flights Within K Stops
+- [ ] `2026-02-05-medium-1109-corporate-flight-bookings.md` — [Medium] 1109. Corporate Flight Bookings
+- [ ] `2026-02-06-easy-252-meeting-rooms.md` — [Easy] 252. Meeting Rooms
+- [ ] `2026-02-06-medium-3439-reschedule-meetings-for-maximum-free-time-i.md` — [Medium] 3439. Reschedule Meetings for Maximum Free Time I
+- [ ] `2026-02-06-medium-532-k-diff-pairs-in-an-array.md` — [Medium] 532. K-diff Pairs in an Array
+- [ ] `2026-02-06-medium-875-koko-eating-bananas.md` — [Medium] 875. Koko Eating Bananas
+- [ ] `2026-02-07-medium-1488-avoid-flood-in-the-city.md` — [Medium] 1488. Avoid Flood in The City
+- [ ] `2026-02-08-medium-210-course-schedule-ii.md` — [Medium] 210. Course Schedule II
+- [ ] `2026-02-08-medium-3112-minimum-time-to-visit-disappearing-nodes.md` — [Medium] 3112. Minimum Time to Visit Disappearing Nodes
+- [ ] `2026-02-09-hard-1944-number-of-visible-people-in-a-queue.md` — [Hard] 1944. Number of Visible People in a Queue
+- [ ] `2026-02-09-medium-91-decode-ways.md` — [Medium] 91. Decode Ways
+- [ ] `2026-02-10-medium-3341-find-minimum-time-to-reach-last-room-i.md` — [Medium] 3341. Find Minimum Time to Reach Last Room I
+- [ ] `2026-02-10-medium-3342-find-minimum-time-to-reach-last-room-ii.md` — [Medium] 3342. Find Minimum Time to Reach Last Room II
+- [ ] `2026-02-11-medium-155-min-stack.md` — [Medium] 155. Min Stack
+- [ ] `2026-02-11-medium-416-partition-equal-subset-sum.md` — [Medium] 416. Partition Equal Subset Sum
+- [ ] `2026-02-12-medium-1438-longest-continuous-subarray-with-absolute-diff.md` — [Medium] 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+- [ ] `2026-02-14-medium-29-divide-two-integers.md` — [Medium] 29. Divide Two Integers
+- [ ] `2026-02-14-medium-36-valid-sudoku.md` — [Medium] 36. Valid Sudoku
+- [ ] `2026-02-15-easy-893-groups-of-special-equivalent-strings.md` — [Easy] 893. Groups of Special-Equivalent Strings
+- [ ] `2026-02-15-hard-23-merge-k-sorted-lists.md` — [Hard] 23. Merge k Sorted Lists
+- [ ] `2026-02-16-medium-38-count-and-say.md` — [Medium] 38. Count and Say
+- [ ] `2026-02-17-hard-42-trapping-rain-water.md` — [Hard] 42. Trapping Rain Water
+- [ ] `2026-02-17-medium-43-multiply-strings.md` — [Medium] 43. Multiply Strings
+- [ ] `2026-02-18-medium-59-spiral-matrix-ii.md` — [Medium] 59. Spiral Matrix II
+- [ ] `2026-02-27-medium-187-repeated-dna-sequences.md` — [Medium] 187. Repeated DNA Sequences
+- [ ] `2026-02-28-medium-61-rotate-list.md` — [Medium] 61. Rotate List
+- [ ] `2026-03-01-medium-80-remove-duplicates-from-sorted-array-ii.md` — [Medium] 80. Remove Duplicates from Sorted Array II
+- [ ] `2026-03-02-hard-358-rearrange-string-k-distance-apart.md` — [Hard] 358. Rearrange String k Distance Apart
+- [ ] `2026-03-02-medium-621-task-scheduler.md` — [Medium] 621. Task Scheduler
+- [ ] `2026-03-03-easy-1275-find-winner-on-a-tic-tac-toe-game.md` — [Easy] 1275. Find Winner on a Tic Tac Toe Game
+- [ ] `2026-03-03-medium-1344-angle-between-hands-of-a-clock.md` — [Medium] 1344. Angle Between Hands of a Clock
+- [ ] `2026-03-03-medium-1804-implement-trie-ii-prefix-tree.md` — [Medium] 1804. Implement Trie II (Prefix Tree)
+- [ ] `2026-03-03-medium-208-implement-trie-prefix-tree.md` — [Medium] 208. Implement Trie (Prefix Tree)
+- [ ] `2026-03-04-easy-1275-find-winner-on-a-tic-tac-toe-game.md` — [Easy] 1275. Find Winner on a Tic Tac Toe Game
+- [ ] `2026-03-04-medium-1344-angle-between-hands-of-a-clock.md` — [Medium] 1344. Angle Between Hands of a Clock
+- [ ] `2026-03-04-medium-348-design-tic-tac-toe.md` — [Medium] 348. Design Tic-Tac-Toe
+- [ ] `2026-03-04-medium-523-continuous-subarray-sum.md` — [Medium] 523. Continuous Subarray Sum
+- [ ] `2026-03-05-medium-78-subsets.md` — [Medium] 78. Subsets
+- [ ] `2026-03-06-easy-110-balanced-binary-tree.md` — [Easy] 110. Balanced Binary Tree
+- [ ] `2026-03-06-easy-112-path-sum.md` — [Easy] 112. Path Sum
+- [ ] `2026-03-06-easy-144-binary-tree-preorder-traversal.md` — [Easy] 144. Binary Tree Preorder Traversal
+- [ ] `2026-03-06-easy-145-binary-tree-postorder-traversal.md` — [Easy] 145. Binary Tree Postorder Traversal
+- [ ] `2026-03-06-easy-543-diameter-of-binary-tree.md` — [Easy] 543. Diameter of Binary Tree
+- [ ] `2026-03-06-easy-94-binary-tree-inorder-traversal.md` — [Easy] 94. Binary Tree Inorder Traversal
+- [ ] `2026-03-06-medium-113-path-sum-ii.md` — [Medium] 113. Path Sum II
+- [ ] `2026-03-07-easy-217-contains-duplicate.md` — [Easy] 217. Contains Duplicate
+- [ ] `2026-03-07-easy-219-contains-duplicate-ii.md` — [Easy] 219. Contains Duplicate II
+- [ ] `2026-03-07-easy-242-valid-anagram.md` — [Easy] 242. Valid Anagram
+- [ ] `2026-03-07-easy-383-ransom-note.md` — [Easy] 383. Ransom Note
+- [ ] `2026-03-07-medium-249-group-shifted-strings.md` — [Medium] 249. Group Shifted Strings
+- [ ] `2026-03-08-medium-1584-min-cost-to-connect-all-points.md` — [Medium] 1584. Min Cost to Connect All Points
+- [ ] `2026-03-09-medium-1202-smallest-string-with-swaps.md` — [Medium] 1202. Smallest String With Swaps
+- [ ] `2026-03-10-easy-876-middle-of-the-linked-list.md` — [Easy] 876. Middle of the Linked List
+- [ ] `2026-03-10-medium-1319-number-of-operations-to-make-network-connected.md` — [Medium] 1319. Number of Operations to Make Network Connected
+- [ ] `2026-03-11-medium-1091-shortest-path-in-binary-matrix.md` — [Medium] 1091. Shortest Path in Binary Matrix
+- [ ] `2026-03-12-medium-797-all-paths-from-source-to-target.md` — [Medium] 797. All Paths From Source to Target
+- [ ] `2026-03-12-medium-841-keys-and-rooms.md` — [Medium] 841. Keys and Rooms
+- [ ] `2026-03-14-medium-365-water-and-jug-problem.md` — [Medium] 365. Water and Jug Problem
+- [ ] `2026-03-15-medium-433-minimum-genetic-mutation.md` — [Medium] 433. Minimum Genetic Mutation
+- [ ] `2026-03-16-medium-2406-divide-intervals-into-minimum-number-of-groups.md` — [Medium] 2406. Divide Intervals Into Minimum Number of Groups
+- [ ] `2026-03-17-medium-1376-time-needed-to-inform-all-employees.md` — [Medium] 1376. Time Needed to Inform All Employees
+- [ ] `2026-03-18-medium-1448-count-good-nodes-in-binary-tree.md` — [Medium] 1448. Count Good Nodes in Binary Tree
+- [ ] `2026-03-18-medium-362-design-hit-counter.md` — [Medium] 362. Design Hit Counter
+- [ ] `2026-03-19-medium-1146-snapshot-array.md` — [Medium] 1146. Snapshot Array
+- [ ] `2026-03-19-medium-1197-minimum-knight-moves.md` — [Medium] 1197. Minimum Knight Moves
+- [ ] `2026-03-19-medium-362-design-hit-counter.md` — [Medium] 362. Design Hit Counter
+- [ ] `2026-03-20-medium-309-best-time-to-buy-and-sell-stock-with-cooldown.md` — [Medium] 309. Best Time to Buy and Sell Stock with Cooldown
+- [ ] `2026-03-21-medium-713-subarray-product-less-than-k.md` — [Medium] 713. Subarray Product Less Than K
+- [ ] `2026-03-22-medium-134-gas-station.md` — [Medium] 134. Gas Station
+- [ ] `2026-03-23-medium-931-minimum-falling-path-sum.md` — [Medium] 931. Minimum Falling Path Sum
+- [ ] `2026-03-24-medium-341-flatten-nested-list-iterator.md` — [Medium] 341. Flatten Nested List Iterator
+- [ ] `2026-03-25-medium-918-maximum-sum-circular-subarray.md` — [Medium] 918. Maximum Sum Circular Subarray
+- [ ] `2026-03-26-medium-1087-brace-expansion.md` — [Medium] 1087. Brace Expansion
+- [ ] `2026-03-27-easy-1768-merge-strings-alternately.md` — [Easy] 1768. Merge Strings Alternately
+- [ ] `2026-03-27-easy-389-find-the-difference.md` — [Easy] 389. Find the Difference
+- [ ] `2026-03-27-medium-151-reverse-words-in-a-string.md` — [Medium] 151. Reverse Words in a String
+- [ ] `2026-03-28-medium-1115-print-foobar-alternately.md` — [Medium] 1115. Print FooBar Alternately
+- [ ] `2026-03-29-medium-1188-design-bounded-blocking-queue.md` — [Medium] 1188. Design Bounded Blocking Queue
+- [ ] `2026-03-30-medium-1870-minimum-speed-to-arrive-on-time.md` — [Medium] 1870. Minimum Speed to Arrive on Time
+- [ ] `2026-03-31-medium-260-single-number-iii.md` — [Medium] 260. Single Number III
+- [ ] `2026-04-01-medium-261-graph-valid-tree.md` — [Medium] 261. Graph Valid Tree
+- [ ] `2026-04-02-medium-73-set-matrix-zeroes.md` — [Medium] 73. Set Matrix Zeroes
+- [ ] `2026-04-05-medium-2433-find-the-original-array-of-prefix-xor.md` — [Medium] 2433. Find The Original Array of Prefix Xor
+- [ ] `2026-04-06-medium-2270-number-of-ways-to-split-array.md` — [Medium] 2270. Number of Ways to Split Array
+- [ ] `2026-04-07-medium-1328-break-a-palindrome.md` — [Medium] 1328. Break a Palindrome
+- [ ] `2026-04-08-medium-382-linked-list-random-node.md` — [Medium] 382. Linked List Random Node
+- [ ] `2026-04-09-medium-223-rectangle-area.md` — [Medium] 223. Rectangle Area
+- [ ] `2026-04-09-medium-2461-maximum-sum-of-distinct-subarrays-with-length-k.md` — [Medium] 2461. Maximum Sum of Distinct Subarrays With Length K
+- [ ] `2026-04-10-medium-2365-task-scheduler-ii.md` — [Medium] 2365. Task Scheduler II
+- [ ] `2026-04-11-medium-2342-max-sum-of-a-pair-with-equal-sum-of-digits.md` — [Medium] 2342. Max Sum of a Pair With Equal Sum of Digits
+- [ ] `2026-04-12-medium-894-all-possible-full-binary-trees.md` — [Medium] 894. All Possible Full Binary Trees
+- [ ] `2026-04-13-medium-1353-maximum-number-of-events-that-can-be-attended.md` — [Medium] 1353. Maximum Number of Events That Can Be Attended
+- [ ] `2026-04-14-medium-143-reorder-list.md` — [Medium] 143. Reorder List
+- [ ] `2026-04-15-medium-1669-merge-in-between-linked-lists.md` — [Medium] 1669. Merge In Between Linked Lists
+- [ ] `2026-04-16-medium-92-reverse-linked-list-ii.md` — [Medium] 92. Reverse Linked List II
+- [ ] `2026-04-17-medium-274-h-index.md` — [Medium] 274. H-Index
+- [ ] `2026-04-18-hard-329-longest-increasing-path-in-a-matrix.md` — [Hard] 329. Longest Increasing Path in a Matrix
+- [ ] `2026-04-18-medium-221-maximal-square.md` — [Medium] 221. Maximal Square
+- [ ] `2026-04-18-medium-329-longest-increasing-path-in-a-matrix.md` — [Medium] 329. Longest Increasing Path in a Matrix
+- [ ] `2026-04-19-hard-2539-count-the-number-of-good-subsequences.md` — [Hard] 2539. Count the Number of Good Subsequences
+- [ ] `2026-04-19-medium-2539-count-the-number-of-good-subsequences.md` — [Medium] 2539. Count the Number of Good Subsequences
+- [ ] `2026-04-20-medium-2571-minimum-operations-to-reduce-an-integer-to-0.md` — [Medium] 2571. Minimum Operations to Reduce an Integer to 0
+- [ ] `2026-04-21-medium-2592-maximize-greatness-of-an-array.md` — [Medium] 2592. Maximize Greatness of an Array
+- [ ] `2026-04-21-medium-2952-minimum-number-of-coins-to-be-added.md` — [Medium] 2952. Minimum Number of Coins to be Added
+- [ ] `2026-04-22-medium-1962-remove-stones-to-minimize-the-total.md` — [Medium] 1962. Remove Stones to Minimize the Total
+
+## Templates / guides still in cache (25)
+
+- [ ] `2025-09-23-cpp-cheatsheet.md` — C++ STL Quick Reference for LeetCode
+- [ ] `2025-09-23-rust-cheatsheet.md` — Ruby Quick Reference for LeetCode
+- [ ] `2025-10-29-leetcode-categories-and-templates.md` — LeetCode Categories and Solution Templates
+- [ ] `2025-10-29-leetcode-templates-advanced.md` — Algorithm Templates: Advanced Techniques
+- [ ] `2025-10-29-leetcode-templates-arrays-strings.md` — Algorithm Templates: Arrays & Strings
+- [ ] `2025-10-29-leetcode-templates-data-structures.md` — Algorithm Templates: Data Structures & Core Algorithms
+- [ ] `2025-10-29-leetcode-templates-dp.md` — Algorithm Templates: Dynamic Programming
+- [ ] `2025-10-29-leetcode-templates-graph.md` — Algorithm Templates: Graph
+- [ ] `2025-10-29-leetcode-templates-math-geometry.md` — Algorithm Templates: Math & Geometry
+- [ ] `2025-10-29-leetcode-templates-trees.md` — Algorithm Templates: Trees
+- [ ] `2025-11-13-leetcode-templates-calculator.md` — Algorithm Templates: Calculator
+- [ ] `2025-11-13-leetcode-templates-stack.md` — Algorithm Templates: Stack
+- [ ] `2025-11-24-leetcode-templates-array-matrix.md` — Algorithm Templates: Array & Matrix
+- [ ] `2025-11-24-leetcode-templates-backtracking.md` — Algorithm Templates: Backtracking
+- [ ] `2025-11-24-leetcode-templates-bfs.md` — Algorithm Templates: BFS
+- [ ] `2025-11-24-leetcode-templates-data-structure-design.md` — Algorithm Templates: Data Structure Design
+- [ ] `2025-11-24-leetcode-templates-dfs.md` — Algorithm Templates: DFS
+- [ ] `2025-11-24-leetcode-templates-linked-list.md` — Algorithm Templates: Linked List
+- [ ] `2025-11-24-leetcode-templates-math-bit-manipulation.md` — Algorithm Templates: Math & Bit Manipulation
+- [ ] `2025-11-24-leetcode-templates-queue.md` — Algorithm Templates: Queue
+- [ ] `2025-11-24-leetcode-templates-string-processing.md` — Algorithm Templates: String Processing
+- [ ] `2025-12-14-leetcode-templates-greedy.md` — Algorithm Templates: Greedy
+- [ ] `2026-01-05-leetcode-templates-heap.md` — Algorithm Templates: Heap
+- [ ] `2026-01-20-leetcode-templates-search.md` — Algorithm Templates: Search
+- [ ] `2026-06-25-leetcode-beginners-guide.md` — LeetCode Beginner's Guide: From Zero to Competitive Programming

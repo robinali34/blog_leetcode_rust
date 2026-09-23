@@ -1,0 +1,297 @@
+---
+layout: post
+title: "[Medium] 1424. Diagonal Traverse II"
+date: 2025-11-17 00:00:00 -0800
+categories: leetcode algorithm medium cpp array matrix hash-map bfs problem-solving
+---
+Given a 2D integer array `nums`, return *all elements of `nums` in diagonal order*.
+
+## Examples
+
+**Example 1:**
+```
+Input: nums = [[1,2,3],[4,5,6],[7,8,9]]
+Output: [1,4,2,7,5,3,8,6,9]
+```
+
+**Example 2:**
+```
+Input: nums = [[1,2,3,4,5],[6,7],[8],[9,10,11],[12,13,14,15,16]]
+Output: [1,6,2,8,7,3,9,4,12,10,5,13,11,14,15,16]
+```
+
+**Example 3:**
+```
+Input: nums = [[1,2,3],[4],[5,6,7],[8],[9,10,11]]
+Output: [1,4,2,5,3,8,6,9,7,10,11]
+```
+
+**Example 4:**
+```
+Input: nums = [[1,2,3,4,5,6]]
+Output: [1,2,3,4,5,6]
+```
+
+## Constraints
+
+- `1 <= nums.length <= 10^5`
+- `1 <= nums[i].length <= 10^5`
+- `1 <= sum(nums[i].length) <= 10^5`
+- `1 <= nums[i][j] <= 10^9`
+
+## Thinking Process
+
+1. **Diagonal Property**: Elements on the same diagonal share the same `row + col` sum.
+
+- BFS visits nodes in non-decreasing distance from the source.
+- Queue guarantees shortest path in unweighted graphs.
+- Process level by level when counting layers or distances.
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 135" style="max-width:100%;height:auto;display:block;margin:1.5em auto;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+<text x="50%" y="18" text-anchor="middle" font-size="13" font-weight="600" fill="#5A5752">Graph BFS layers</text>
+
+  <circle cx="60" cy="70" r="16" fill="#D4D8E0" stroke="#8B8680"/><text x="60" y="74" text-anchor="middle" font-size="11">S</text>
+  <circle cx="140" cy="45" r="14" fill="#E8E3D8" stroke="#B8B5B0"/><text x="140" y="49" text-anchor="middle" font-size="10">a</text>
+  <circle cx="140" cy="95" r="14" fill="#E8E3D8" stroke="#B8B5B0"/><text x="140" y="99" text-anchor="middle" font-size="10">b</text>
+  <circle cx="210" cy="70" r="14" fill="#E8D5D0" stroke="#B8A5A0"/><text x="210" y="74" text-anchor="middle" font-size="10">t</text>
+  <line x1="74" y1="65" x2="126" y2="50" stroke="#9A9792" stroke-width="1.5"/>
+  <line x1="74" y1="75" x2="126" y2="95" stroke="#9A9792" stroke-width="1.5"/>
+  <line x1="154" y1="50" x2="196" y2="65" stroke="#9A9792" stroke-width="1.5"/>
+  <text x="140" y="125" text-anchor="middle" font-size="11" fill="#6B6560">BFS: expand by layers (queue)</text>
+
+</svg>
+
+## Common Approaches
+
+Typical techniques for this pattern:
+
+| Approach | Time | Space | Notes |
+|----------|------|-------|-------|
+| **Queue BFS** *(this problem)* | O(n) | O(n) | Shortest path in unweighted graphs |
+| Multi-source BFS | O(n) | O(n) | Start from all sources simultaneously |
+| 0-1 BFS / deque | O(n) | O(n) | Weights 0 or 1 |
+| Level-order BFS | O(n) | O(w) | Process by depth/layer |
+
+## Solution
+
+**Time Complexity:** O(n) where n is total number of elements  
+**Space Complexity:** O(n)
+
+We can solve this problem using two approaches:
+1. **Hash Map Grouping**: Group elements by their diagonal index (row + col), then iterate through diagonals in order.
+2. **BFS Traversal**: Use a queue to traverse diagonally, processing elements level by level.
+
+### Solution 1: Hash Map Grouping (C++20 Optimized)
+
+**Key Insight:** Elements on the same diagonal have the same sum of row and column indices (`row + col`). We can group all elements by this diagonal index, then iterate through diagonals in ascending order.
+
+```cpp
+using namespace std;
+
+class Solution {
+public:
+    vector<int> findDiagonalOrder(vector<vector<int>>& nums) {
+        unordered_map<int, vector<int>> groups;
+        
+        // Traverse from bottom to top to maintain diagonal order
+        for (int row = (int)nums.size() - 1; row >= 0; row--) {
+            for (int col = 0; col < (int)nums[row].size(); col++) {
+                int diagonal = row + col;
+                groups[diagonal].push_back(nums[row][col]);
+            }
+        }
+        
+        vector<int> rtn;
+        rtn.reserve(nums.size() * nums[0].size());
+        
+        // Process diagonals in order (0, 1, 2, ...)
+        int curr = 0;
+        while (groups.find(curr) != groups.end()) {
+            for (int num : groups[curr]) {
+                rtn.push_back(num);
+            }
+            curr++;
+        }
+        
+        return rtn;
+    }
+};
+```
+
+### Solution Explanation
+
+**Approach:** Queue BFS (this problem)
+
+**Key idea:** 1. **Diagonal Property**: Elements on the same diagonal share the same `row + col` sum.
+
+**How the code works:**
+1. **Diagonal Property**: Elements on the same diagonal share the same `row + col` sum.
+- BFS visits nodes in non-decreasing distance from the source.
+- Queue guarantees shortest path in unweighted graphs.
+- Process level by level when counting layers or distances.
+
+**Walkthrough** — input `nums = [[1,2,3],[4,5,6],[7,8,9]]`, expected output `[1,4,2,7,5,3,8,6,9]`:
+
+1. Initialize variables from the problem setup.
+2. Apply the main loop / recursion until the condition is met.
+3. Confirm the result matches the expected output.
+
+**Time:** O(n) - Each element is visited once · **Space Complexity:** O(n)
+
+**C++20 Optimizations:**
+- `groups.find(curr) != groups.end()` for map lookup (C++20 compatible)
+- `reserve()` to pre-allocate memory for efficiency
+- Range-based for loops for cleaner iteration
+
+**How it works:**
+1. **Group by Diagonal**: For each element at `(row, col)`, calculate `diagonal = row + col` and add it to the corresponding group.
+2. **Bottom-to-Top Traversal**: We traverse rows from bottom to top so that when we process diagonals in order, elements appear in the correct sequence.
+3. **Sequential Processing**: Process diagonals starting from 0, adding all elements in each diagonal group to the result.
+
+### Solution 2: BFS Traversal (C++20 Optimized)
+
+**Key Insight:** We can use BFS starting from `(0, 0)` and traverse diagonally. For each cell, we explore:
+- The cell below (if in first column): `(row + 1, 0)`
+- The cell to the right: `(row, col + 1)`
+
+```cpp
+using namespace std;
+
+class Solution {
+public:
+    vector<int> findDiagonalOrder(vector<vector<int>>& nums) {
+        queue<pair<int, int>> q;
+        q.push({0, 0});
+        vector<int> rtn;
+        rtn.reserve(nums.size() * nums[0].size());
+        
+        while (!q.empty()) {
+            auto [row, col] = q.front();
+            q.pop();
+            
+            rtn.push_back(nums[row][col]);
+            
+            // If in first column, add cell below
+            if (col == 0 && row + 1 < (int)nums.size()) {
+                q.push({row + 1, col});
+            }
+            
+            // Add cell to the right
+            if (col + 1 < (int)nums[row].size()) {
+                q.push({row, col + 1});
+            }
+        }
+        
+        return rtn;
+    }
+};
+```
+
+**C++20 Optimizations:**
+- Structured bindings `auto [row, col]` for pair unpacking (C++17)
+- `reserve()` for memory pre-allocation
+- Simplified type casting with `(int)` instead of `static_cast<int>()`
+
+**How it works:**
+1. **Start at Origin**: Begin BFS from `(0, 0)`.
+2. **Process Current Cell**: Add the current cell's value to the result.
+3. **Explore Neighbors**:
+   - If in the first column (`col == 0`), add the cell below: `(row + 1, 0)`
+   - Always add the cell to the right: `(row, col + 1)`
+4. **Continue BFS**: Process all cells in the queue until empty.
+## Step-by-Step Example
+
+**Input:** `nums = [[1,2,3],[4,5,6],[7,8,9]]`
+
+### Solution 1: Hash Map Approach
+
+| Step | Row | Col | Diagonal | Groups |
+|------|-----|-----|----------|--------|
+| 1 | 2 | 0 | 2 | `{2: [7]}` |
+| 2 | 2 | 1 | 3 | `{2: [7], 3: [8]}` |
+| 3 | 2 | 2 | 4 | `{2: [7], 3: [8], 4: [9]}` |
+| 4 | 1 | 0 | 1 | `{1: [4], 2: [7], 3: [8], 4: [9]}` |
+| 5 | 1 | 1 | 2 | `{1: [4], 2: [7,5], 3: [8], 4: [9]}` |
+| 6 | 1 | 2 | 3 | `{1: [4], 2: [7,5], 3: [8,6], 4: [9]}` |
+| 7 | 0 | 0 | 0 | `{0: [1], 1: [4], 2: [7,5], 3: [8,6], 4: [9]}` |
+| 8 | 0 | 1 | 1 | `{0: [1], 1: [4,2], 2: [7,5], 3: [8,6], 4: [9]}` |
+| 9 | 0 | 2 | 2 | `{0: [1], 1: [4,2], 2: [7,5,3], 3: [8,6], 4: [9]}` |
+
+**Processing diagonals:**
+- Diagonal 0: `[1]` → `[1]`
+- Diagonal 1: `[4,2]` → `[1,4,2]`
+- Diagonal 2: `[7,5,3]` → `[1,4,2,7,5,3]`
+- Diagonal 3: `[8,6]` → `[1,4,2,7,5,3,8,6]`
+- Diagonal 4: `[9]` → `[1,4,2,7,5,3,8,6,9]`
+
+**Output:** `[1,4,2,7,5,3,8,6,9]`
+
+### Solution 2: BFS Approach
+
+| Step | Queue | Process | Result | Next Moves |
+|------|-------|---------|--------|------------|
+| 0 | `[(0,0)]` | - | `[]` | - |
+| 1 | `[(0,0)]` | `(0,0)` → 1 | `[1]` | `(1,0), (0,1)` |
+| 2 | `[(1,0), (0,1)]` | `(1,0)` → 4 | `[1,4]` | `(2,0), (1,1)` |
+| 3 | `[(0,1), (2,0), (1,1)]` | `(0,1)` → 2 | `[1,4,2]` | `(0,2)` |
+| 4 | `[(2,0), (1,1), (0,2)]` | `(2,0)` → 7 | `[1,4,2,7]` | `(2,1)` |
+| 5 | `[(1,1), (0,2), (2,1)]` | `(1,1)` → 5 | `[1,4,2,7,5]` | `(1,2)` |
+| 6 | `[(0,2), (2,1), (1,2)]` | `(0,2)` → 3 | `[1,4,2,7,5,3]` | - |
+| 7 | `[(2,1), (1,2)]` | `(2,1)` → 8 | `[1,4,2,7,5,3,8]` | `(2,2)` |
+| 8 | `[(1,2), (2,2)]` | `(1,2)` → 6 | `[1,4,2,7,5,3,8,6]` | - |
+| 9 | `[(2,2)]` | `(2,2)` → 9 | `[1,4,2,7,5,3,8,6,9]` | - |
+
+**Output:** `[1,4,2,7,5,3,8,6,9]`
+
+## Visual Representation
+
+```
+Matrix:
+    0  1  2
+0 [ 1  2  3 ]
+1 [ 4  5  6 ]
+2 [ 7  8  9 ]
+
+Diagonals (row + col):
+    0  1  2
+0 [ 0  1  2 ]
+1 [ 1  2  3 ]
+2 [ 2  3  4 ]
+
+Diagonal Traversal:
+Diagonal 0: [1]
+Diagonal 1: [4, 2]
+Diagonal 2: [7, 5, 3]
+Diagonal 3: [8, 6]
+Diagonal 4: [9]
+
+Result: [1, 4, 2, 7, 5, 3, 8, 6, 9]
+```
+
+### Complexity
+### Solution 1: Hash Map
+- **Time:** O(n) - Each element is visited once
+- **Space:** O(n) - Hash map stores all elements
+
+### Solution 2: BFS
+- **Time:** O(n) - Each element is processed once
+- **Space:** O(n) - Queue can contain up to O(n) elements in worst case
+
+## References
+
+- [LC 1424: Diagonal Traverse II on LeetCode](https://www.leetcode.com/problems/diagonal-traverse-ii/)
+- [LeetCode Discuss — LC 1424: Diagonal Traverse II](https://www.leetcode.com/problems/diagonal-traverse-ii/discuss/)
+- [LeetCode Editorial](https://www.leetcode.com/problems/diagonal-traverse-ii/editorial/) *(may require premium)*
+
+## Common Mistakes
+
+- Skipping edge cases (empty input, single element, boundaries).
+- Off-by-one errors in loops and index ranges.
+- Forgetting to handle the case when no valid answer exists.
+
+## Key Takeaways
+
+1. **Diagonal Property**: Elements on the same diagonal share the same `row + col` sum.
+2. **Traversal Order**: Bottom-to-top traversal ensures correct ordering when processing diagonals sequentially.
+3. **BFS Alternative**: BFS naturally explores diagonals when we prioritize right moves over down moves.
+4. **Jagged Arrays**: Both solutions handle jagged arrays (rows of different lengths) correctly.

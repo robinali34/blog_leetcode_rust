@@ -1,0 +1,394 @@
+---
+layout: post
+title: "[Medium] 323. Number of Connected Components in an Undirected Graph"
+date: 2026-01-07 00:00:00 -0700
+categories: [leetcode, medium, graph, bfs, dfs, union-find]
+permalink: /2026/01/07/medium-323-number-of-connected-components-in-an-undirected-graph/
+tags: [leetcode, medium, graph, bfs, connected-components, undirected-graph]
+---
+You have a graph of `n` nodes labeled from `0` to `n - 1`. You are given an integer `n` and an array `edges` where `edges[i] = [ai, bi]` indicates that there is an undirected edge between nodes `ai` and `bi` in the graph.
+
+Return *the number of connected components in the graph*.
+
+## Examples
+
+**Example 1:**
+```
+Input: n = 5, edges = [[0,1],[1,2],[3,4]]
+Output: 2
+Explanation:
+0 - 1 - 2  (component 1)
+3 - 4      (component 2)
+```
+
+**Example 2:**
+```
+Input: n = 5, edges = [[0,1],[1,2],[2,3],[3,4]]
+Output: 1
+Explanation:
+0 - 1 - 2 - 3 - 4  (single component)
+```
+
+## Constraints
+
+- `1 <= n <= 2000`
+- `1 <= edges.length <= 5000`
+- `edges[i].length == 2`
+- `0 <= ai <= bi < n`
+- `ai != bi`
+- There are no repeated edges.
+
+## Common Approaches
+
+Typical techniques for this pattern:
+
+| Approach | Time | Space | Notes |
+|----------|------|-------|-------|
+| **Queue BFS** *(this problem)* | O(n) | O(n) | Shortest path in unweighted graphs |
+| Multi-source BFS | O(n) | O(n) | Start from all sources simultaneously |
+| 0-1 BFS / deque | O(n) | O(n) | Weights 0 or 1 |
+| Level-order BFS | O(n) | O(w) | Process by depth/layer |
+
+## Thinking Process
+
+This problem requires counting the number of **connected components** in an undirected graph. A connected component is a maximal set of nodes where every pair of nodes is connected by a path.
+
+### Key Insights:
+
+1. **Connected Components**: Groups of nodes that are reachable from each other
+2. **Graph Traversal**: Use BFS or DFS to explore all nodes in a component
+3. **Visited Tracking**: Mark visited nodes to avoid revisiting and to identify new components
+4. **Component Counting**: Each unvisited node starts a new component
+
+### Algorithm:
+
+1. **Build adjacency list**: Create graph representation from edges
+2. **Initialize visited array**: Track which nodes have been explored
+3. **For each unvisited node**:
+   - Start BFS/DFS from that node
+   - Mark all reachable nodes as visited
+   - Increment component count
+4. **Return**: Total number of components
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 135" style="max-width:100%;height:auto;display:block;margin:1.5em auto;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+<text x="50%" y="18" text-anchor="middle" font-size="13" font-weight="600" fill="#5A5752">Graph BFS layers</text>
+
+  <circle cx="60" cy="70" r="16" fill="#D4D8E0" stroke="#8B8680"/><text x="60" y="74" text-anchor="middle" font-size="11">S</text>
+  <circle cx="140" cy="45" r="14" fill="#E8E3D8" stroke="#B8B5B0"/><text x="140" y="49" text-anchor="middle" font-size="10">a</text>
+  <circle cx="140" cy="95" r="14" fill="#E8E3D8" stroke="#B8B5B0"/><text x="140" y="99" text-anchor="middle" font-size="10">b</text>
+  <circle cx="210" cy="70" r="14" fill="#E8D5D0" stroke="#B8A5A0"/><text x="210" y="74" text-anchor="middle" font-size="10">t</text>
+  <line x1="74" y1="65" x2="126" y2="50" stroke="#9A9792" stroke-width="1.5"/>
+  <line x1="74" y1="75" x2="126" y2="95" stroke="#9A9792" stroke-width="1.5"/>
+  <line x1="154" y1="50" x2="196" y2="65" stroke="#9A9792" stroke-width="1.5"/>
+  <text x="140" y="125" text-anchor="middle" font-size="11" fill="#6B6560">BFS: expand by layers (queue)</text>
+
+</svg>
+
+## Solutions
+
+### **Solution 1: BFS (Breadth-First Search)**
+
+```cpp
+class Solution {
+public:
+    int countComponents(int n, vector<vector<int>>& edges) {
+        vector<vector<int>> adj(n);
+        for(auto& edge: edges) {
+            adj[edge[0]].push_back(edge[1]);
+            adj[edge[1]].push_back(edge[0]);
+        }
+        int rtn = 0;
+        vector<bool> visited(n);
+        for(int i = 0; i < n; i++) {
+            if(!visited[i]) {
+                bfs(adj, i, visited);
+                rtn++;
+            }
+        }
+        return rtn;
+    }
+private:
+    void bfs(vector<vector<int>>& adj, int u, vector<bool>& visited) {
+        queue<int> q;
+        q.push(u);
+        visited[u] = true;
+        while(!q.empty()) {
+            int curr = q.front();
+            q.pop();
+            for(int successor: adj[curr]) {
+                if(!visited[successor]) {
+                    q.push(successor);
+                    visited[successor] = true;
+                }
+            }
+        }
+    }
+};
+```
+
+### Solution Explanation
+
+**Approach:** Queue BFS (this problem)
+
+**Key idea:** This problem requires counting the number of **connected components** in an undirected graph. A connected component is a maximal set of nodes where every pair of nodes is connected by a path.
+
+**How the code works:**
+1. **Connected Components**: Groups of nodes that are reachable from each other
+2. **Graph Traversal**: Use BFS or DFS to explore all nodes in a component
+3. **Visited Tracking**: Mark visited nodes to avoid revisiting and to identify new components
+4. **Component Counting**: Each unvisited node starts a new component
+1. **Build adjacency list**: Create graph representation from edges
+2. **Initialize visited array**: Track which nodes have been explored
+
+**Walkthrough** — input `n = 5, edges = [[0,1],[1,2],[3,4]]`, expected output `2`:
+
+0 - 1 - 2  (component 1)
+3 - 4      (component 2)
+
+### **Algorithm Explanation:**
+
+1. **Build Graph (Lines 4-8)**:
+   - Create adjacency list of size `n`
+   - For each edge `[ai, bi]`, add bidirectional connections
+   - Since graph is undirected, add both `adj[ai].push_back(bi)` and `adj[bi].push_back(ai)`
+
+2. **Component Counting (Lines 9-15)**:
+   - Initialize visited array and component counter
+   - **For each node** from 0 to n-1:
+     - If node is unvisited, it starts a new component
+     - Call BFS to explore all nodes in this component
+     - Mark all reachable nodes as visited
+     - Increment component counter
+
+3. **BFS Traversal (Lines 17-28)**:
+   - **Initialize**: Create queue, push starting node, mark as visited
+   - **While queue not empty**:
+     - Remove node from front
+     - **For each neighbor**:
+       - If neighbor is unvisited, add to queue and mark as visited
+   - This explores all nodes reachable from the starting node
+
+### **Why This Works:**
+
+- **BFS explores entire component**: Starting from any node in a component, BFS visits all nodes in that component
+- **Visited tracking**: Prevents revisiting nodes and ensures each component is counted once
+- **Unvisited nodes = new components**: Each unvisited node must belong to a new component
+- **Bidirectional edges**: Adding both directions ensures we can traverse the undirected graph correctly
+
+### **Example Walkthrough:**
+
+**For `n = 5, edges = [[0,1],[1,2],[3,4]]`:**
+
+```
+Graph structure:
+0 - 1 - 2  (component 1)
+3 - 4      (component 2)
+
+Initial: visited = [false, false, false, false, false], rtn = 0
+
+Node 0 (unvisited):
+  BFS from 0:
+    Queue: [0]
+    Process 0: visited[0] = true, neighbors [1]
+    Queue: [1]
+    Process 1: visited[1] = true, neighbors [0, 2]
+    Queue: [2] (0 already visited)
+    Process 2: visited[2] = true, neighbors [1] (already visited)
+    Queue: []
+  visited = [true, true, true, false, false]
+  rtn = 1
+
+Node 1 (visited): skip
+
+Node 2 (visited): skip
+
+Node 3 (unvisited):
+  BFS from 3:
+    Queue: [3]
+    Process 3: visited[3] = true, neighbors [4]
+    Queue: [4]
+    Process 4: visited[4] = true, neighbors [3] (already visited)
+    Queue: []
+  visited = [true, true, true, true, true]
+  rtn = 2
+
+Node 4 (visited): skip
+
+Result: 2 components
+```
+
+### **Complexity Analysis:**
+
+- **Time Complexity:** O(n + m) where n is number of nodes and m is number of edges
+  - Building adjacency list: O(m)
+  - BFS visits each node once: O(n)
+  - BFS processes each edge once: O(m)
+  - Total: O(n + m)
+- **Space Complexity:** O(n + m)
+  - Adjacency list: O(n + m)
+  - Visited array: O(n)
+  - Queue: O(n) worst case (one level of nodes)
+  - Total: O(n + m)
+
+### **Solution 2: DFS (Depth-First Search)**
+
+```cpp
+class Solution {
+public:
+    int countComponents(int n, vector<vector<int>>& edges) {
+        vector<vector<int>> adj(n);
+        for(auto& edge: edges) {
+            adj[edge[0]].push_back(edge[1]);
+            adj[edge[1]].push_back(edge[0]);
+        }
+        int rtn = 0;
+        vector<bool> visited(n);
+        for(int i = 0; i < n; i++) {
+            if(!visited[i]) {
+                dfs(adj, i, visited);
+                rtn++;
+            }
+        }
+        return rtn;
+    }
+private:
+    void dfs(vector<vector<int>>& adj, int u, vector<bool>& visited) {
+        visited[u] = true;
+        for(int v: adj[u]) {
+            if(!visited[v]) {
+                dfs(adj, v, visited);
+            }
+        }
+    }
+};
+```
+
+### **Complexity Analysis:**
+
+- **Time Complexity:** O(n + m) where n is number of nodes and m is number of edges
+  - Building adjacency list: O(m)
+  - DFS visits each node once: O(n)
+  - DFS processes each edge once: O(m)
+  - Total: O(n + m)
+- **Space Complexity:** O(n + m)
+  - Adjacency list: O(n + m)
+  - Visited array: O(n)
+  - Recursion stack: O(n) worst case (chain of nodes)
+  - Total: O(n + m)
+
+### **Solution 3: Union-Find (Disjoint Set Union)**
+
+```cpp
+class Solution {
+public:
+    int countComponents(int n, vector<vector<int>>& edges) {
+        vector<int> parent(n);
+        iota(parent.begin(), parent.end(), 0);
+        
+        for(auto& edge: edges) {
+            unite(parent, edge[0], edge[1]);
+        }
+        
+        int rtn = 0;
+        for(int i = 0; i < n; i++) {
+            if(parent[i] == i) rtn++;
+        }
+        return rtn;
+    }
+private:
+    int find(vector<int>& parent, int x) {
+        if(parent[x] != x) {
+            parent[x] = find(parent, parent[x]);
+        }
+        return parent[x];
+    }
+    
+    void unite(vector<int>& parent, int a, int b) {
+        parent[find(parent, a)] = find(parent, b);
+    }
+};
+```
+
+### **Algorithm Explanation:**
+
+1. **Initialize (Line 3-4)**:
+   - Create parent array of size `n`
+   - Initialize each node as its own parent using `iota()` (parent[i] = i)
+
+2. **Union Edges (Lines 6-8)**:
+   - For each edge `[a, b]`, unite nodes `a` and `b`
+   - This merges the components containing `a` and `b`
+
+3. **Count Components (Lines 10-13)**:
+   - Count nodes where `parent[i] == i`
+   - These are the root nodes, each representing one component
+
+4. **Find Operation (Lines 16-20)**:
+   - Recursively find the root of a node
+   - **Path compression**: Set `parent[x] = find(parent, parent[x])` to flatten the tree
+   - This makes future find operations faster
+
+5. **Unite Operation (Lines 22-24)**:
+   - Find roots of both nodes
+   - Set one root's parent to the other root
+   - This merges the two components
+
+### **Why This Works:**
+
+- **Union-Find groups components**: All nodes in a component share the same root
+- **Path compression**: Makes find operations nearly O(1) amortized
+- **Root counting**: Each root represents one component
+- **No graph building needed**: Works directly with edge list
+
+### **Complexity Analysis:**
+
+- **Time Complexity:** O(n × α(n) + m × α(n)) ≈ O(n + m) where α is the inverse Ackermann function
+  - **Initialization**: O(n) - setting up parent array
+  - **Union operations**: O(m × α(n)) - for each edge, find and unite operations
+    - `find()` with path compression: O(α(n)) amortized
+    - `unite()` calls `find()` twice: O(α(n)) amortized
+  - **Component counting**: O(n × α(n)) - find root for each node
+  - **Total**: O(n × α(n) + m × α(n)) ≈ O(n + m) since α(n) < 5 for practical values
+- **Space Complexity:** O(n)
+  - Parent array: O(n)
+  - No additional data structures needed
+  - Recursion stack for find: O(n) worst case, but path compression limits depth
+
+**Note:** The inverse Ackermann function α(n) grows extremely slowly. For all practical purposes, α(n) ≤ 5, making Union-Find operations effectively constant time.
+
+### **Comparison of All Solutions:**
+
+| Approach | Time Complexity | Space Complexity | Advantages |
+|----------|----------------|-----------------|------------|
+| BFS | O(n + m) | O(n + m) | Level-by-level exploration, intuitive |
+| DFS | O(n + m) | O(n + m) | Recursive, simpler code |
+| Union-Find | O(n + m) | O(n) | Most space efficient, no graph building |
+## Related Problems
+
+- [LC 547: Number of Provinces](https://www.leetcode.com/problems/number-of-provinces/) - Same problem with adjacency matrix
+- [LC 200: Number of Islands](https://www.leetcode.com/problems/number-of-islands/) - Connected components in grid
+- [LC 684: Redundant Connection](https://www.leetcode.com/problems/redundant-connection/) - Find edge that creates cycle
+- [LC 1319: Number of Operations to Make Network Connected](https://www.leetcode.com/problems/number-of-operations-to-make-network-connected/) - Connect components
+
+## Common Mistakes
+
+- Skipping edge cases (empty input, single element, boundaries).
+- Off-by-one errors in loops and index ranges.
+- Forgetting to handle the case when no valid answer exists.
+
+## Key Takeaways
+
+1. **Connected Components**: Groups of nodes reachable from each other
+2. **Graph Traversal**: BFS/DFS explores all nodes in a component
+3. **Visited Tracking**: Essential to avoid revisiting and count components correctly
+4. **Unvisited = New Component**: Each unvisited node starts a new component
+
+## References
+
+- [LC 323: Number of Connected Components in an Undirected Graph on LeetCode](https://www.leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
+- [LeetCode Discuss — LC 323: Number of Connected Components in an Undirected Graph](https://www.leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/discuss/)
+- [LeetCode Editorial](https://www.leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/editorial/) *(may require premium)*
+
+## Template Reference
+
+- [Graph](/blog_leetcode_rust/posts/2025-10-29-leetcode-templates-graph/)
